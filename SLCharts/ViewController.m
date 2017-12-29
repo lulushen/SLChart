@@ -12,9 +12,11 @@
 @interface ViewController ()<TouchBaseChartDelegate,TouchPieChartDelegate>
 //折线图
 @property (nonatomic , strong)SLBaseChartView * lineChart;
+//柱状图
 @property (nonatomic , strong)SLBaseChartView * barChart;
-
+//扇形图
 @property (nonatomic, strong)SLPieChartView * pieChart;
+
 @end
 
 @implementation ViewController
@@ -29,7 +31,7 @@
     _barChart.xValuesArray =
     [NSMutableArray arrayWithObjects:@"201606",@"201607",@"201608",@"201609",@"201610",@"201611", nil];
     _barChart.yValuesArray =  [NSMutableArray arrayWithObjects:@"686",@"630",@"760",@"673",@"807",@"856", nil];
-//     _barChart.ySecondValuesArray =  [NSMutableArray arrayWithObjects:@"686",@"630",@"760",@"673",@"807",@"856",@"784", nil];
+    _barChart.ySecondValuesArray =  [NSMutableArray arrayWithObjects:@"686",@"630",@"760",@"673",@"807",@"856",@"784", nil];
     _barChart.secondBaseChartColor = [UIColor orangeColor];
     _barChart.chartType = SLBaseBarChartType;
     _barChart.yUnitString = @"%";
@@ -44,14 +46,14 @@
     _lineChart.delegate = self;
     _lineChart.xValuesArray =
     [NSMutableArray arrayWithObjects:@"201611",@"201611",@"201611",@"201611",@"201611",@"201611", nil];
-//    _lineChart.ySecondValuesArray =  [NSMutableArray arrayWithObjects:@"686",@"999999.9",@"760",@"673",@"807",@"856", nil];
-    _lineChart.yValuesArray =
+    _lineChart.ySecondValuesArray =  [NSMutableArray arrayWithObjects:@"686",@"999999.9",@"760",@"673",@"807",@"856", nil];
+//    _lineChart.yValuesArray =
 //    [NSMutableArray arrayWithObjects:@"5",@"119",@"6",@"3",@"8",@"4", nil];
 //    [NSMutableArray arrayWithObjects:@"-30",@"0",@"34", nil];
 //    [NSMutableArray arrayWithObjects:@"430330.87", nil];
 //    [NSMutableArray arrayWithObjects:@"-490337.687", nil];
 //    [NSMutableArray arrayWithObjects:@"50",@"50",@"60",@"30",@"30",@"40", nil];
-    [NSMutableArray arrayWithObjects:@"0.422",@"0.403",@"0.345",@"0.390",@"0.398",@"0.457", nil];
+//    [NSMutableArray arrayWithObjects:@"0.422",@"0.403",@"0.345",@"0.390",@"0.398",@"0.457", nil];
 //    [NSMutableArray arrayWithObjects:@"-724",@"-686",@"-614",@"-660",@"-673",@"-807", nil];
     _lineChart.circlePointType = CirclePointTypeSolid;
     //724 686 614 660 673 807
